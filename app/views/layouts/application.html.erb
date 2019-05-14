@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="box">
+        <h1>Tristan's boring tasks 😴</h1>
+        <p class="button inline"><%= link_to 'Home', root_path %></p>
+        <p class="button inline"><%= link_to 'Add new task', new_task_path %></p>
+        <br><br>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,8 @@
+
+<h3><%= @task.title %></h3>
+
+<p class="callout"><%= @task.details %></p>
+
+<p class="callout"><%= @task.completed? ? "✅ Task complete!" : " ❌ Task not complete!" %></p>
+
+<p class="button"><%= link_to "Edit task", edit_path(@task.id) %> </p>

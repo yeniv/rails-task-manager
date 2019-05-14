@@ -1,0 +1,8 @@
+  <% @tasks.each do |task| %>
+    <br>
+    <%= check_box("Completed?", task.completed, {checked: task.completed}) %>
+    <%= link_to task.title, task_path(task.id) %>
+    <%= link_to "🗑", delete_path(task),
+    method: :delete,
+    data: { confirm: "Delete '#{task.title}?" }%>
+  <% end %>
